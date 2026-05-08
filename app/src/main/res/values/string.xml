@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">记账记录App</string>
+    <string name="app_title">记账记录列表</string>
+    <string name="app_description">使用RecyclerView展示记账记录，支持滚动和复用</string>
+    <string name="app_footer">教学示例：RecyclerView的复用机制</string>
+</resources>
