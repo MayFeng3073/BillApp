@@ -98,28 +98,31 @@
             <EditText
                 android:id="@+id/etAmount"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="金额"
                 android:inputType="numberDecimal"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"/>
 
             <!-- 类别输入 -->
             <EditText
                 android:id="@+id/etCategory"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="类别（早餐、交通等）"
                 android:inputType="text"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"/>
 
             <!-- 备注输入 -->
             <EditText
                 android:id="@+id/etNote"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="备注（可选）"
                 android:inputType="text"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"/>
 
             <!-- 收入支出选择 -->
             <RadioGroup
@@ -157,7 +160,7 @@
                 android:backgroundTint="@color/primary"
                 android:textColor="@color/white" />
 
-            <!-- 新增：发送记账提醒通知按钮（必须放在这里，绝对不能写到colors.xml里！） -->
+            <!-- 发送记账提醒通知按钮 -->
             <Button
                 android:id="@+id/btnSendNotification"
                 android:layout_width="match_parent"
@@ -170,7 +173,7 @@
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
-        <!-- ===================== 广播功能区域（修改后变宽对齐） ===================== -->
+        <!-- 广播功能区域 -->
         <Button
             android:id="@+id/btn_send_broadcast"
             android:layout_width="match_parent"
@@ -181,9 +184,8 @@
             android:backgroundTint="@color/primary"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="16dp"/> <!-- 加左右边距，和上方按钮完全对齐 -->
+            android:layout_marginHorizontal="16dp"/>
 
-        <!-- 广播提示文字（保持居中，样式统一） -->
         <TextView
             android:id="@+id/tv_broadcast_tip"
             android:layout_width="match_parent"
@@ -194,9 +196,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginHorizontal="16dp"
             android:textColor="@color/text_secondary"/>
-        <!-- ===================== 广播功能区域结束 ===================== -->
 
-        <!-- ===================== SERVICE 按钮（美观对齐版） ===================== -->
+        <!-- SERVICE 按钮 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -241,9 +242,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="16dp"
             android:textColor="@color/text_secondary"/>
-        <!-- ===================== SERVICE 结束 ===================== -->
 
-        <!-- ===================== 独立：测试 ContentProvider 按钮 ===================== -->
+        <!-- 测试 ContentProvider 按钮 -->
         <Button
             android:id="@+id/btn_test_provider"
             android:layout_width="match_parent"
@@ -255,9 +255,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="24dp"/> <!-- 关键：给按钮底部加24dp大间距 -->
+            android:layout_marginBottom="24dp"/>
 
-        <!-- ===================== 记录列表标题 ===================== -->
+        <!-- 记录列表标题 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
