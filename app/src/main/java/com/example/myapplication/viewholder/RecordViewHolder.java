@@ -28,8 +28,19 @@ public class RecordViewHolder extends RecyclerView.ViewHolder {
     }
 
     // 绑定数据
+    // 绑定数据
     public void bind(Expense expense) {
-        iv_icon.setImageResource(expense.getIconResId());
+
+        // ===================== 【核心修复：只有测试记录显示数据库图标】 =====================
+        if ("Provider测试".equals(expense.getTypeName())) {
+            // 换一个所有版本都能用的系统图标
+            iv_icon.setImageResource(android.R.drawable.ic_menu_manage);
+        } else {
+            // 正常记录 → 显示原来的图标（完全不变）
+            iv_icon.setImageResource(expense.getIconResId());
+        }
+        // ====================================================================================
+
         tv_type_name.setText(expense.getTypeName());
 
         // ✅ 直接设置double，不调用任何自定义方法
@@ -40,7 +51,7 @@ public class RecordViewHolder extends RecyclerView.ViewHolder {
         int color = expense.isIncome() ?
                 itemView.getContext().getColor(R.color.income) :
                 itemView.getContext().getColor(R.color.expense);
-        tv_amount.setTextColor(color);
+        tv_amount.setTextColor(color); // 这里是setTextColor，不是setText！
         tv_category.setTextColor(color);
 
         // 日期处理
