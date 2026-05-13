@@ -1,0 +1,15 @@
+# 无关文件
+*.exe
+*.lnk
+*副本*/
+gradle-*/
+AS/
+第三周/
+
+# Android缓存/配置文件
+.idea/
+.gradle/
+build/
+app/build/
+*.iml
+local.properties
